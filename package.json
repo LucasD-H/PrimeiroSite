@@ -1,0 +1,13 @@
+{
+  "name": "primeiro-site",
+  "version": "1.0.0",
+  "description": "Site responsivo em PHP com SASS",
+  "scripts": {
+    "sass": "sass sass/style.scss css/style.css --style=compressed --silence-deprecation=import --silence-deprecation=slash-div --silence-deprecation=global-builtin",
+    "sass:watch": "sass sass/style.scss css/style.css --watch --style=compressed --silence-deprecation=import --silence-deprecation=slash-div --silence-deprecation=global-builtin",
+    "dev": "php -S localhost:8080"
+  },
+  "devDependencies": {
+    "sass": "^1.85.1"
+  }
+}

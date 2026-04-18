@@ -15,7 +15,7 @@
         if (
             $nome != '' 
             && $email != '' 
-            && $mensagem =! '')
+            && $mensagem != '')
         {
             // usuário preencheu corretamente
             $mensagemEmail = 'Nome: ' . $nome . ' - ';
@@ -50,7 +50,7 @@
                 <?php endif; ?>
                 <?php if($sucessoFormulario != ''): ?>
                     <div class="formulario__sucesso">
-                        <?php echo $erroFormulario ?>
+                        <?php echo $sucessoFormulario ?>
                     </div>
                 <?php endif; ?>
                 <div class="formulario__grupo formulario__grupo--coluna-esq">

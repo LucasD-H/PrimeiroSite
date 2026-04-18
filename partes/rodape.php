@@ -13,7 +13,7 @@
                 <div class="rodape__coluna">
                     <h2 class="rodape__titulo">Social</h2>
                     <ul class="rodape__lista-links">
-                        <li><a class="rodape__lista-links__item" href="https:twitter.com/LucasDH3" target="_blank">Twitter</a></li>
+                        <li><a class="rodape__lista-links__item" href="https://twitter.com/LucasDH3" target="_blank">Twitter</a></li>
                         <li><a class="rodape__lista-links__item" href="https://www.facebook.com/lucas.danieldeholanda" target="_blank">Facebook</a></li>
                         <li><a class="rodape__lista-links__item" href="https://www.instagram.com/lucasdh54" target="_blank">Instagram</a></li>
                     </ul>
@@ -23,7 +23,7 @@
                     <ul class="rodape__lista-links">
                         <li><a class="rodape__lista-links__item" href="index.php">Home</a></li>
                         <li><a class="rodape__lista-links__item" href="sobre.php">Sobre nós</a></li>
-                        <li><a class="rodape__lista-links__item" href="portifolio.php">Portifolio</a></li>
+                        <li><a class="rodape__lista-links__item" href="portfolio.php">Portifolio</a></li>
                         <li><a class="rodape__lista-links__item" href="contato.php">Contato</a></li>
                     </ul>
                 </div>
