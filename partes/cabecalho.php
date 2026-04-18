@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php 
-        $titulo = 'Desing Responsivo';
+        $titulo = 'Design Responsivo';
         global $tituloPagina;
         if($tituloPagina != ''){
             $titulo .= ' | ' . $tituloPagina;
@@ -19,9 +19,9 @@
     <header class="cabecalho">
         <div class="container">
             <?php if($tituloPagina == ''): ?>
-                <h1 class="logo">Desing Responsivo</h1>
+                <h1 class="logo">Design Responsivo</h1>
             <?php else: ?>  
-                <a href="index.php" class="logo">Desing Responsivo</a>
+                <a href="index.php" class="logo">Design Responsivo</a>
             <?php endif; ?>
             <nav class="menu-principal menu-principal--fechado">
                 <button class="menu-principal__btn">Abrir/fechar menu</button>

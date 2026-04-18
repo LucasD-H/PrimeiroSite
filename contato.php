@@ -9,26 +9,30 @@
     $erroFormulario = '';
     $sucessoFormulario = '';
     if( isset($_POST['submit']) ) {
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        $mensagem = $_POST['mensagem'];
+        $nome = str_replace(["\r", "\n"], '', trim($_POST['nome']));
+        $email = str_replace(["\r", "\n"], '', trim($_POST['email']));
+        $mensagem = trim($_POST['mensagem']);
         if (
             $nome != '' 
             && $email != '' 
             && $mensagem != '')
         {
-            // usuário preencheu corretamente
-            $mensagemEmail = 'Nome: ' . $nome . ' - ';
-            $mensagemEmail .= 'Mail: ' . $email . ' - ';
-            $mensagemEmail .= 'Mensagem: ' . $mensagem;
-            if(mail('contato@site.com.br', 'Mensagem de contato', $mensagemEmail)){
-                //email enviado
-                $sucessoFormulario = 'Mensagem enviada com sucesso!';
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $erroFormulario = "Por favor, informe um e-mail válido!";
+            } else {
+                // usuário preencheu corretamente
+                $mensagemEmail = 'Nome: ' . $nome . ' - ';
+                $mensagemEmail .= 'Mail: ' . $email . ' - ';
+                $mensagemEmail .= 'Mensagem: ' . $mensagem;
+                if(mail('contato@site.com.br', 'Mensagem de contato', $mensagemEmail)){
+                    //email enviado
+                    $sucessoFormulario = 'Mensagem enviada com sucesso!';
 
-            }
-            else{
-                //email não enviadoS
-                $erroFormulario = "Falha ao enviar o email, por favor tente mais tarde, ou através do email JalimRabei@gmail.com";
+                }
+                else{
+                    //email não enviado
+                    $erroFormulario = "Falha ao enviar o email, por favor tente mais tarde, ou através do email JalimRabei@gmail.com";
+                }
             }
         }
         else{
@@ -40,17 +44,17 @@
         <header class="pagina-cabecalho">
             <h1 class="pagina-cabecalho__titulo">Contato</h1>
         </header>
-        <section class="container" class="pagina-conteudo">
+        <section class="container pagina-conteudo">
             <p class="text-center">Suspendisse convallis, turpis vitae placerat luctus, est felis dictum augue.</p>
             <form action="contato.php" class="formulario" method="post">
                 <?php if($erroFormulario != ''): ?>
                     <div class="formulario__erro">
-                        <?php echo $erroFormulario ?>
+                        <?php echo htmlspecialchars($erroFormulario) ?>
                     </div>
                 <?php endif; ?>
                 <?php if($sucessoFormulario != ''): ?>
                     <div class="formulario__sucesso">
-                        <?php echo $sucessoFormulario ?>
+                        <?php echo htmlspecialchars($sucessoFormulario) ?>
                     </div>
                 <?php endif; ?>
                 <div class="formulario__grupo formulario__grupo--coluna-esq">

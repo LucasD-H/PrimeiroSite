@@ -4,9 +4,9 @@
     include('partes/cabecalho.php'); 
 ?> 
         <article>
-            <Header class="pagina-cabecalho">
+            <header class="pagina-cabecalho">
                 <h1 class="pagina-cabecalho__titulo">Sobre nós</h1>
-            </Header>
+            </header>
             <section class="container pagina-conteudo">
                 <p class="text-center">Aliquam erat volutpat. Vivamus cursus pulvinar turpis</p>
                 <img src="img/time-unido.jpg" class="img-left-md" alt="Mesa de escritório com vários colegas se comprimentando">
