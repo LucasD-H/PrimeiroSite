@@ -3,7 +3,7 @@
         <div class="rodape__linha-1">
             <div class="container">
                 <div class="rodape__coluna">
-                    <a href="index.html" class="logo logo--branco">Desing Responsivo</a>              
+                    <a href="index.php" class="logo logo--branco">Design Responsivo</a>              
                     <p>Nullam ac semper lectus. Sed sit amet<br>
                        ornare nisi. Proin cursus ligula eu eros<br>
                        volutpat egestas. Suspendisse potenti.<br>

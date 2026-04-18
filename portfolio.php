@@ -4,7 +4,7 @@
     include('partes/cabecalho.php'); 
 ?> 
        <header class="pagina-cabecalho">
-            <H1 class="pagina-cabecalho__titulo">Portfolio</H1>
+            <h1 class="pagina-cabecalho__titulo">Portfolio</h1>
        </header>
        <section class="pagina-conteudo">
             <p class="text-center">
@@ -16,7 +16,7 @@
                 <ul class="lista-trabalhos">
                     <li class="lista-trabalhos__item">
                         <a data-fancybox="gallery" href="img/portfolio/aircraft-2806035_1280.jpg">
-                            <img class="lista-trabalhos__img" src="img/portfolio/miniaturas/aircraft-2806035_min.jpg">
+                            <img class="lista-trabalhos__img" src="img/portfolio/miniaturas/aircraft-2806035_min.jpg" alt="">
                             <h2 class="lista-trabalhos__titulo">Nome do trabalho de salvar</h2>
                         </a>
                     </li>
