@@ -1,0 +1,101 @@
+@use 'abstracts' as *;
+
+.depoimentos__caixa {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.depoimentos__viewport {
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.depoimentos__track {
+  display: flex;
+  transition: transform 400ms ease-out;
+}
+
+.depoimentos__item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.depoimentos__conteudo {
+  display: flex;
+  flex-direction: column;
+}
+
+.depoimentos__img {
+  margin: 0 auto;
+  display: block;
+  box-shadow: 3px 3px 0 #000;
+  margin-bottom: 20px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.depoimentos__texto {
+  line-height: 24px;
+
+  &::before {
+    background: url('/img/aspas.png') no-repeat;
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 23px;
+    margin-right: 5px;
+  }
+}
+
+.depoimentos__pessoa {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.depoimentos__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.depoimentos__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  &--ativo {
+    background: #fff;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .depoimentos__item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .depoimentos__img {
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  .depoimentos__pessoa {
+    text-align: left;
+  }
+}

@@ -1,0 +1,32 @@
+<app-page-banner titulo="Portfolio" />
+
+<section class="pagina-conteudo">
+  <p class="text-center">
+    Integer vulputate vulputate nulla, nec malesuada nibh imperdiet ut. <br />
+    Nulla vulputate pellentesque nisi, at mattis purus. Nam est elit, aliquet lacinia scelerisque
+    a, viverra sed dolor. <br />
+    Phasellus aliquet lectus magna. Nullam sit amet.
+  </p>
+  <nav>
+    <ul class="lista-trabalhos">
+      @for (trabalho of trabalhos; track trabalho.imagemCompleta; let indice = $index) {
+        <li class="lista-trabalhos__item">
+          <button type="button" class="lista-trabalhos__botao" (click)="abrirTrabalho(indice)">
+            <img class="lista-trabalhos__img" [src]="trabalho.miniatura" alt="" />
+            <h2 class="lista-trabalhos__titulo">{{ trabalho.titulo }}</h2>
+          </button>
+        </li>
+      }
+    </ul>
+  </nav>
+</section>
+
+@if (trabalhoSelecionado(); as trabalho) {
+  <app-lightbox
+    [imagemUrl]="trabalho.imagemCompleta"
+    [titulo]="trabalho.titulo"
+    (fechar)="fecharLightbox()"
+    (anterior)="irParaAnterior()"
+    (proxima)="irParaProximo()"
+  />
+}

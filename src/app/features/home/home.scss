@@ -1,0 +1,113 @@
+@use 'abstracts' as *;
+
+.cabecalho-home {
+  background: url('/img/cabecalho-home-bg.jpg') #000 no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+  padding-top: 150px;
+
+  &__titulo {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+
+  &__role {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    background-image: url('/img/cabecalho-home-bg-md.jpg');
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    height: 100vh;
+
+    &__titulo {
+      font-size: 60px;
+      margin-top: 250px;
+    }
+
+    &__subtitulo {
+      font-size: 22px;
+    }
+
+    &__role {
+      display: block;
+      position: absolute;
+      background: url('/img/icone-mouse.png') no-repeat center right;
+      color: #fff;
+      bottom: 10px;
+      left: 50%;
+      height: 50px;
+      width: 190px;
+      text-align: left;
+      font-size: 20px;
+      text-decoration: none;
+      line-height: 45px;
+      margin-left: -95px;
+    }
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    background-image: url('/img/cabecalho-home-bg-xl.jpg');
+  }
+}
+
+.home__titulo {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: $cor-principal;
+    margin: 15px auto 0;
+  }
+
+  &--branco::after {
+    background-color: #fff;
+  }
+}
+
+.servicos {
+  padding: 30px 0;
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+  }
+
+  &__item {
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    flex: 1 1 100%;
+
+    @media (min-width: $breakpoint-md) {
+      flex: 1 1 calc(33.333% - 20px);
+    }
+  }
+
+  &__texto {
+    color: $cor-leitura;
+  }
+}
+
+.depoimentos {
+  background-color: $cor-principal;
+  background-image: url('/img/cabecalho-pagina-bg.jpg');
+  background-attachment: fixed;
+  color: #fff;
+  padding: 30px 0;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 150px 0;
+  }
+}

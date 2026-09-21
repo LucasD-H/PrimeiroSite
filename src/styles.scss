@@ -1,0 +1,19 @@
+/* Estilos globais da aplicação */
+
+// Base
+@use 'base/normalize';
+@use 'base/fonts';
+@use 'base/reset';
+
+// Layout
+@use 'layout/container';
+@use 'layout/alinhamento';
+
+// Componentes globais (reutilizados em várias partes da aplicação)
+@use 'components/logo';
+@use 'components/pagina-conteudo';
+
+html,
+body {
+  height: 100%;
+}

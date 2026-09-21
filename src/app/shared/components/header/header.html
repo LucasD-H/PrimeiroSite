@@ -1,0 +1,49 @@
+<header class="cabecalho">
+  <div class="container">
+    <a class="logo" routerLink="/">Design Responsivo</a>
+    <nav class="menu-principal" [class.menu-principal--fechado]="!menuAberto()">
+      <button
+        type="button"
+        class="menu-principal__btn"
+        (click)="alternarMenu()"
+      >
+        Abrir/fechar menu
+      </button>
+      <ul class="menu-principal__lista">
+        <li>
+          <a
+            class="menu-principal__item"
+            routerLink="/"
+            routerLinkActive="menu-principal__item--atual"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            class="menu-principal__item"
+            routerLink="/sobre"
+            routerLinkActive="menu-principal__item--atual"
+            >Sobre nós</a
+          >
+        </li>
+        <li>
+          <a
+            class="menu-principal__item"
+            routerLink="/portfolio"
+            routerLinkActive="menu-principal__item--atual"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a
+            class="menu-principal__item"
+            routerLink="/contato"
+            routerLinkActive="menu-principal__item--atual"
+            >Contato</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

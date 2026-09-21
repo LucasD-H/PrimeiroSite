@@ -1,0 +1,28 @@
+<header class="cabecalho-home">
+  <h2 class="cabecalho-home__titulo">Texto grande bem aqui!</h2>
+  <p class="cabecalho-home__subtitulo">Texto menorzinho aqui</p>
+  <a class="cabecalho-home__role" href="#servicos">role para ver mais</a>
+</header>
+
+<section id="servicos" class="servicos">
+  <div class="container">
+    <h2 class="home__titulo">o que fazemos</h2>
+
+    <div class="servicos__grid">
+      @for (servico of servicos; track servico.titulo) {
+        <section class="servicos__item">
+          <img [src]="servico.icone" [alt]="servico.alt" />
+          <h3>{{ servico.titulo }}</h3>
+          <p class="servicos__texto">{{ servico.texto }}</p>
+        </section>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="depoimentos">
+  <div class="container">
+    <h2 class="home__titulo home__titulo--branco">O que falam de nós</h2>
+    <app-testimonials-carousel [depoimentos]="depoimentos" />
+  </div>
+</section>

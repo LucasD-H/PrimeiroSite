@@ -1,0 +1,28 @@
+<div class="lightbox" (click)="fechar.emit()">
+  <button type="button" class="lightbox__fechar" aria-label="Fechar" (click)="fechar.emit()">
+    &times;
+  </button>
+
+  <button
+    type="button"
+    class="lightbox__navegacao lightbox__navegacao--anterior"
+    aria-label="Imagem anterior"
+    (click)="anterior.emit(); $event.stopPropagation()"
+  >
+    &#10094;
+  </button>
+
+  <figure class="lightbox__conteudo" (click)="$event.stopPropagation()">
+    <img class="lightbox__imagem" [src]="imagemUrl()" [alt]="titulo()" />
+    <figcaption class="lightbox__legenda">{{ titulo() }}</figcaption>
+  </figure>
+
+  <button
+    type="button"
+    class="lightbox__navegacao lightbox__navegacao--proxima"
+    aria-label="Próxima imagem"
+    (click)="proxima.emit(); $event.stopPropagation()"
+  >
+    &#10095;
+  </button>
+</div>

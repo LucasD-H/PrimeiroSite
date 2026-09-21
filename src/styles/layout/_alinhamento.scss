@@ -1,0 +1,17 @@
+@use 'abstracts' as *;
+
+.text-center {
+  text-align: center;
+}
+
+.img-left {
+  float: left;
+}
+
+@media (min-width: $breakpoint-md) {
+  .img-left-md {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}

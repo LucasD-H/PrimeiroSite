@@ -1,0 +1,37 @@
+<div class="depoimentos__caixa">
+  <div
+    class="depoimentos__viewport"
+    (pointerdown)="aoIniciarArraste($event)"
+    (pointermove)="aoMoverArraste($event)"
+    (pointerup)="aoFinalizarArraste()"
+    (pointerleave)="aoFinalizarArraste()"
+  >
+    <div
+      class="depoimentos__track"
+      [style.width.%]="larguraTrackPercentual()"
+      [style.transform]="transformTrack()"
+    >
+      @for (depoimento of depoimentos(); track $index) {
+        <section class="depoimentos__item" [style.width.%]="larguraItemPercentual()">
+          <img class="depoimentos__img" [src]="depoimento.imagem" alt="foto da pessoa" />
+          <div class="depoimentos__conteudo">
+            <p class="depoimentos__texto">{{ depoimento.texto }}</p>
+            <p class="depoimentos__pessoa">{{ depoimento.pessoa }}</p>
+          </div>
+        </section>
+      }
+    </div>
+  </div>
+
+  <div class="depoimentos__dots">
+    @for (depoimento of depoimentos(); track $index) {
+      <button
+        type="button"
+        class="depoimentos__dot"
+        [class.depoimentos__dot--ativo]="$index === indiceAtual()"
+        [attr.aria-label]="'Ver depoimento ' + ($index + 1)"
+        (click)="irPara($index)"
+      ></button>
+    }
+  </div>
+</div>
