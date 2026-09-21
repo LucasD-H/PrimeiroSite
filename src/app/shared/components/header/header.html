@@ -1,14 +1,8 @@
 <header class="cabecalho">
-  <div class="container">
-    <a class="logo" routerLink="/">Design Responsivo</a>
+  <div class="container-header">
     <nav class="menu-principal" [class.menu-principal--fechado]="!menuAberto()">
-      <button
-        type="button"
-        class="menu-principal__btn"
-        (click)="alternarMenu()"
-      >
-        Abrir/fechar menu
-      </button>
+      <a class="logo" routerLink="/">Design Responsivo</a>
+
       <ul class="menu-principal__lista">
         <li>
           <a
@@ -45,5 +39,15 @@
         </li>
       </ul>
     </nav>
+    <button type="button" class="menu-principal__btn" (click)="alternarMenu()">
+      <span class="menu-principal__btn-icone">
+        @if (menuAberto()) {
+          <app-icon-menu-fechar [tamanho]="24" [cor]="'#3a3a3a'" />
+        } @else {
+          <app-icon-menu-abrir [tamanho]="24" [cor]="'#3a3a3a'" />
+        }
+      </span>
+      <span class="sr-only">Abrir/fechar menu</span>
+    </button>
   </div>
 </header>

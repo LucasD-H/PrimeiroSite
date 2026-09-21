@@ -36,6 +36,22 @@ describe('Header', () => {
     expect(nav.classList.contains('menu-principal--fechado')).toBeFalse();
   });
 
+  it('deve alternar o ícone do botão (hambúrguer/X) independente do nav', async () => {
+    const botao: HTMLButtonElement = fixture.nativeElement.querySelector('.menu-principal__btn');
+    expect(fixture.nativeElement.querySelector('app-icon-menu-abrir')).toBeTruthy();
+    expect(fixture.nativeElement.querySelector('app-icon-menu-fechar')).toBeFalsy();
+
+    botao.click();
+    await fixture.whenStable();
+    expect(fixture.nativeElement.querySelector('app-icon-menu-fechar')).toBeTruthy();
+    expect(fixture.nativeElement.querySelector('app-icon-menu-abrir')).toBeFalsy();
+
+    botao.click();
+    await fixture.whenStable();
+    expect(fixture.nativeElement.querySelector('app-icon-menu-abrir')).toBeTruthy();
+    expect(fixture.nativeElement.querySelector('app-icon-menu-fechar')).toBeFalsy();
+  });
+
   it('deve exibir os links de navegação principais', () => {
     const links: NodeListOf<HTMLAnchorElement> =
       fixture.nativeElement.querySelectorAll('.menu-principal__item');
