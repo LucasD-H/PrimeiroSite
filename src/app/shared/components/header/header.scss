@@ -4,23 +4,23 @@
   display: flex;
   justify-content: center;
   background: #fff;
-  padding: 15px;
+  padding: 1.5rem;
   position: fixed;
   width: 100%;
   z-index: 99;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.2);
 
   .container-header {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     width: 100%;
   }
 
   @media (min-width: $breakpoint-md) {
-    min-height: 100px;
+    min-height: 10rem;
 
     .container-header {
       display: flex;
@@ -32,10 +32,10 @@
 
 .sr-only {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0.1rem;
+  height: 0.1rem;
   padding: 0;
-  margin: -1px;
+  margin: -0.1rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -72,7 +72,7 @@
     margin: 0;
     list-style: none;
 
-    @media (max-width: 767px) {
+    @media (max-width: 76.7rem) {
       // Mantido próximo da altura real do conteúdo (4 itens + gaps) para que
       // a transição não "gaste" tempo animando espaço vazio invisível —
       // é isso que fazia abrir parecer rápido e fechar parecer lento.
@@ -100,8 +100,8 @@
     font-weight: bold;
     color: #343434;
     display: block;
-    font-size: 18px;
-    height: 20px;
+    font-size: 1.8rem;
+    height: 2rem;
     transition: all 200ms ease-out;
 
     &:hover {
@@ -113,12 +113,12 @@
     color: $cor-principal;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 76.7rem) {
     &--fechado {
       .menu-principal__lista {
         max-height: 0;
         opacity: 0;
-        transform: translateY(-8px);
+        transform: translateY(-0.8rem);
       }
     }
   }

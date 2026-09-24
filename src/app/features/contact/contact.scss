@@ -3,17 +3,17 @@
 .pagina-contato {
   .pagina-conteudo {
     @media (min-width: $breakpoint-md) {
-      padding-right: 150px;
-      padding-left: 150px;
+      padding-right: 15rem;
+      padding-left: 15rem;
     }
   }
 }
 
 .formulario {
   background-color: #efecec;
-  margin: 80px -15px;
-  padding: 40px 15px;
-  box-shadow: 0 3px 5px #989898;
+  margin: 8rem -1.5rem;
+  padding: 4rem 1.5rem;
+  box-shadow: 0 0.3rem 0.5rem #989898;
   display: flex;
   flex-wrap: wrap;
 
@@ -21,30 +21,30 @@
     width: 100%;
     background: #f00;
     color: #fff;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
   }
 
   &__sucesso {
     width: 100%;
     background: #00a91e;
     color: #fff;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
   }
 
   &__grupo {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     width: 100%;
   }
 
   &__campo {
     width: 100%;
-    border: 1px solid #c4c4c4;
-    border-radius: 5px;
-    padding: 10px 4px;
+    border: 0.1rem solid #c4c4c4;
+    border-radius: 0.5rem;
+    padding: 1rem 0.4rem;
   }
 
   &__label {
@@ -52,11 +52,11 @@
   }
 
   &__botao {
-    border: 3px solid $cor-principal;
-    border-radius: 300px;
+    border: 0.3rem solid $cor-principal;
+    border-radius: 30rem;
     background-color: #fff;
     color: $cor-principal;
-    padding: 5px 20px;
+    padding: 0.5rem 2rem;
     cursor: pointer;
     display: block;
     margin: 0 auto;
@@ -69,10 +69,10 @@
   }
 
   label.error {
-    border-left: 4px solid #f00;
-    padding-left: 4px;
+    border-left: 0.4rem solid #f00;
+    padding-left: 0.4rem;
     color: #f00;
-    margin-left: 4px;
+    margin-left: 0.4rem;
     display: block;
   }
 
@@ -81,15 +81,15 @@
 
     &__grupo--coluna-esq {
       width: 50%;
-      padding-right: 15px;
+      padding-right: 1.5rem;
     }
     &__grupo--coluna-dir {
       width: 50%;
-      padding-left: 15px;
+      padding-left: 1.5rem;
     }
     &__botao {
-      font-size: 20px;
-      transform: translateY(-35px);
+      font-size: 2rem;
+      transform: translateY(-3.5rem);
     }
   }
 }
@@ -100,7 +100,7 @@
   padding-bottom: 100%;
   position: relative;
   overflow: hidden;
-  margin: 0 -15px -25px -15px;
+  margin: 0 -1.5rem -2.5rem -1.5rem;
 
   iframe {
     width: 100% !important;
@@ -110,7 +110,7 @@
     left: 0;
   }
 
-  @media (min-width: 450px) {
+  @media (min-width: 45rem) {
     padding-bottom: 60%;
   }
   @media (min-width: $breakpoint-md) {

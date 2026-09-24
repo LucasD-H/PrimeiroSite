@@ -2,20 +2,20 @@
 
 .container {
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   
 
   @media (min-width: $breakpoint-sm) {
     width: 100%;
   }
   @media (min-width: $breakpoint-md) {
-    width: 720px;
+    width: 72rem;
   }
   @media (min-width: $breakpoint-lg) {
-    width: 960px;
+    width: 96rem;
   }
   @media (min-width: $breakpoint-xl) {
-    width: 1140px;
+    width: 114rem;
   }
 }
