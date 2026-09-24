@@ -1,19 +1,19 @@
 @use 'abstracts' as *;
 
 .pagina-conteudo {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   overflow: auto;
 
   p {
     color: $cor-leitura;
-    line-height: 22px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    line-height: 2.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   @media (min-width: $breakpoint-md) {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 }
