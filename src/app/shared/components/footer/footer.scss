@@ -9,7 +9,8 @@
 
   &__linha-1 {
     background-color: #272525;
-    background-image: url('/img/rodape-bg.jpg');
+    background-image: url('/img/rodape-bg.webp');
+    background-image: image-set(url('/img/rodape-bg.avif') type('image/avif'));
     background-size: cover;
     padding: 1.5rem;
     display: flex;
@@ -54,7 +55,8 @@
 
   @media (min-width: $breakpoint-md) {
     &__linha-1 {
-      background-image: url('/img/rodape-bg-md.jpg');
+      background-image: url('/img/rodape-bg-md.webp');
+      background-image: image-set(url('/img/rodape-bg-md.avif') type('image/avif'));
       flex-wrap: nowrap;
     }
 
@@ -70,7 +72,8 @@
 
   @media (min-width: $breakpoint-xl) {
     &__linha-1 {
-      background-image: url('/img/rodape-bg-xl.jpg');
+      background-image: url('/img/rodape-bg-xl.webp');
+      background-image: image-set(url('/img/rodape-bg-xl.avif') type('image/avif'));
     }
   }
 }

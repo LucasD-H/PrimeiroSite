@@ -1,4 +1,5 @@
 import { Component, DestroyRef, OnInit, computed, inject, input, signal } from '@angular/core';
+import { avifSrc } from '../../../../shared/utils/imagem-otimizada';
 import { Depoimento } from '../../models/depoimento.model';
 
 const INTERVALO_AUTOPLAY_MS = 5000;
@@ -12,6 +13,8 @@ const LIMITE_ARRASTO_PX = 50;
 })
 export class TestimonialsCarousel implements OnInit {
   readonly depoimentos = input.required<Depoimento[]>();
+
+  protected readonly avifSrc = avifSrc;
 
   protected readonly indiceAtual = signal(0);
   protected readonly deltaArrastoPx = signal(0);

@@ -13,7 +13,10 @@
   </button>
 
   <figure class="lightbox__conteudo" (click)="$event.stopPropagation()">
-    <img class="lightbox__imagem" [src]="imagemUrl()" [alt]="titulo()" />
+    <picture>
+      <source [srcset]="avifSrc(imagemUrl())" type="image/avif" />
+      <img class="lightbox__imagem" [src]="imagemUrl()" [alt]="titulo()" />
+    </picture>
     <figcaption class="lightbox__legenda">{{ titulo() }}</figcaption>
   </figure>
 

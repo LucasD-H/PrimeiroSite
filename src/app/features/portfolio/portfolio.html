@@ -12,7 +12,10 @@
       @for (trabalho of trabalhos; track trabalho.imagemCompleta; let indice = $index) {
         <li class="lista-trabalhos__item">
           <button type="button" class="lista-trabalhos__botao" (click)="abrirTrabalho(indice)">
-            <img class="lista-trabalhos__img" [src]="trabalho.miniatura" alt="" />
+            <picture>
+              <source [srcset]="avifSrc(trabalho.miniatura)" type="image/avif" />
+              <img class="lista-trabalhos__img" [src]="trabalho.miniatura" alt="" />
+            </picture>
             <h2 class="lista-trabalhos__titulo">{{ trabalho.titulo }}</h2>
           </button>
         </li>

@@ -2,7 +2,8 @@
 
 .pagina-cabecalho {
   background-color: $cor-principal;
-  background-image: url('/img/cabecalho-pagina-bg.jpg');
+  background-image: url('/img/cabecalho-pagina-bg.webp');
+  background-image: image-set(url('/img/cabecalho-pagina-bg.avif') type('image/avif'));
   background-attachment: fixed;
   color: #fff;
   padding-top: 14rem;

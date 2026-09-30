@@ -8,8 +8,8 @@ describe('TestimonialsCarousel', () => {
   let fixture: ComponentFixture<TestimonialsCarousel>;
 
   const depoimentos: Depoimento[] = [
-    { imagem: '/img/a.jpg', texto: 'Texto 1', pessoa: 'Pessoa 1' },
-    { imagem: '/img/b.jpg', texto: 'Texto 2', pessoa: 'Pessoa 2' },
+    { imagem: '/img/a.webp', texto: 'Texto 1', pessoa: 'Pessoa 1' },
+    { imagem: '/img/b.webp', texto: 'Texto 2', pessoa: 'Pessoa 2' },
   ];
 
   beforeEach(async () => {

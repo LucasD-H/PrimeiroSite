@@ -13,7 +13,10 @@
     >
       @for (depoimento of depoimentos(); track $index) {
         <section class="depoimentos__item" [style.width.%]="larguraItemPercentual()">
-          <img class="depoimentos__img" [src]="depoimento.imagem" alt="foto da pessoa" />
+          <picture>
+            <source [srcset]="avifSrc(depoimento.imagem)" type="image/avif" />
+            <img class="depoimentos__img" [src]="depoimento.imagem" alt="foto da pessoa" />
+          </picture>
           <div class="depoimentos__conteudo">
             <p class="depoimentos__texto">{{ depoimento.texto }}</p>
             <p class="depoimentos__pessoa">{{ depoimento.pessoa }}</p>

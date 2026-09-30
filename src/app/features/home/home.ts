@@ -36,19 +36,19 @@ export class Home {
 
   protected readonly depoimentos: Depoimento[] = [
     {
-      imagem: '/img/depoimentos/pessoa-1.jpg',
+      imagem: '/img/depoimentos/pessoa-1.webp',
       texto:
         'Phasellus dapibus sapien et est blandit, ornare interdum arcu iaculis. Vestibulum placerat ex sit amet erat mattis bibendum. Mauris non mi augue.',
       pessoa: 'Nome Pessoa - Cargo',
     },
     {
-      imagem: '/img/depoimentos/pessoa-1.jpg',
+      imagem: '/img/depoimentos/pessoa-1.webp',
       texto:
         'Phasellus dapibus sapien et est blandit, ornare interdum arcu iaculis. Vestibulum placerat ex sit amet erat mattis bibendum. Mauris non mi augue.',
       pessoa: 'Nome Pessoa - Cargo',
     },
     {
-      imagem: '/img/depoimentos/pessoa-1.jpg',
+      imagem: '/img/depoimentos/pessoa-1.webp',
       texto:
         'Phasellus dapibus sapien et est blandit, ornare interdum arcu iaculis. Vestibulum placerat ex sit amet erat mattis bibendum. Mauris non mi augue.',
       pessoa: 'Nome Pessoa - Cargo',

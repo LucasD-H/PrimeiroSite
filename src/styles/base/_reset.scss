@@ -12,6 +12,12 @@ img {
   max-width: 100%;
   max-height: auto;
 }
+
+// `picture` não deve interferir no layout do `img` que ele envolve
+// (usado nos elementos <picture> com fontes AVIF/WebP).
+picture {
+  display: contents;
+}
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.6rem;

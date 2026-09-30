@@ -1,4 +1,5 @@
 import { Component, HostListener, input, output } from '@angular/core';
+import { avifSrc } from '../../../../shared/utils/imagem-otimizada';
 
 @Component({
   selector: 'app-lightbox',
@@ -9,6 +10,8 @@ import { Component, HostListener, input, output } from '@angular/core';
 export class Lightbox {
   readonly imagemUrl = input.required<string>();
   readonly titulo = input.required<string>();
+
+  protected readonly avifSrc = avifSrc;
 
   readonly fechar = output<void>();
   readonly anterior = output<void>();

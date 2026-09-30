@@ -12,7 +12,7 @@ describe('Lightbox', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(Lightbox);
-    fixture.componentRef.setInput('imagemUrl', '/img/portfolio/foto.jpg');
+    fixture.componentRef.setInput('imagemUrl', '/img/portfolio/foto.webp');
     fixture.componentRef.setInput('titulo', 'Trabalho exemplo');
     component = fixture.componentInstance;
     await fixture.whenStable();
